@@ -1,0 +1,44 @@
+// We would make this a global variable
+$primaryTextColor: rgb(89, 89, 89);
+
+article {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .product-title {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+
+        img {
+            margin-right: 1rem;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+    }
+
+    .desc {
+        color: $primaryTextColor;
+    }
+
+    .date {
+        color: $primaryTextColor;
+    }
+}
+

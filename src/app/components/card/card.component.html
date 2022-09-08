@@ -1,0 +1,12 @@
+<article>
+    <header>
+        <div class="product-title">
+            <img [src]="productData?.location" alt="Product Image">
+            <!-- May need to truncate name -->
+            <span>{{ productData?.name | titlecase }}</span>
+        </div>
+        <span>${{ productData?.price }}</span>
+    </header>
+    <p class="desc">{{ productData?.description }}</p>
+    <p class="date-header"><strong>Purchase Date</strong> <br> {{ productData?.purchaseDate | date }}</p>
+</article>

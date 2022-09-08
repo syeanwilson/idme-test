@@ -1,0 +1,9 @@
+<h1>Purchases</h1>
+<main>
+  <section id="cards" *ngFor="let product of products;">
+    <app-card [productData]="product"></app-card>
+  </section>
+  <section id="table">
+    <app-table [products]="products"></app-table>
+  </section>
+</main>

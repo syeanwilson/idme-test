@@ -1,0 +1,20 @@
+<table>
+    <tr class="table-header">
+      <th>Name</th>
+      <th>Location</th>
+      <th>Purchase Date</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let product of products;">
+      <td><strong>{{ product?.name | titlecase }}</strong></td>
+      <td><img [src]="product?.location" alt="Product Image"></td>
+      <td>{{ product?.purchaseDate | date }}</td>
+      <td><span class="pill" [ngStyle]="{ 'color': product.category | catColor }">{{ product?.category }}</span></td>
+      <td>{{ product?.description }}</td>
+      <td><strong>${{ product?.price }}</strong></td>
+      <!-- This colon is to simulate a vertical more menu; Would add actual icon and menu implementation -->
+      <th>:</th>
+    </tr>
+  </table>
